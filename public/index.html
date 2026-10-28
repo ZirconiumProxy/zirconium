@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zirconium</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,5 95,40 50,95 5,40' fill='%2367e8f9'/></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="/lib/m.js" defer></script>
+  <script src="/cdn/c.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="bg"><span></span><span></span><span></span></div>
+
+  <main id="home">
+    <div class="gem" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a5f3fc"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+        <polygon points="50,4 94,38 50,96 6,38" fill="url(#g)"/>
+        <polygon points="50,4 70,38 50,96 30,38" fill="#ffffff22"/>
+        <polyline points="6,38 94,38" stroke="#ffffff55" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    <h1>Zirconium</h1>
+    <p class="tag">Browse freely. Brilliantly.</p>
+
+    <form id="search-form" autocomplete="off">
+      <input id="address" type="text" placeholder="Search the web or enter a URL" autofocus />
+      <button type="submit" aria-label="Go">→</button>
+    </form>
+
+    <div class="shortcuts">
+      <button data-url="https://www.google.com">Google</button>
+      <button data-url="https://www.youtube.com">YouTube</button>
+      <button data-url="https://www.wikipedia.org">Wikipedia</button>
+      <button data-url="https://www.reddit.com">Reddit</button>
+      <button data-url="https://discord.com/app">Discord</button>
+    </div>
+
+    <details class="settings">
+      <summary>Settings</summary>
+      <label>Search engine
+        <select id="engine">
+          <option value="https://duckduckgo.com/?q=%s">DuckDuckGo</option>
+          <option value="https://www.google.com/search?q=%s">Google</option>
+          <option value="https://www.bing.com/search?q=%s">Bing</option>
+          <option value="https://search.brave.com/search?q=%s">Brave</option>
+        </select>
+      </label>
+      <label>Tab cloak
+        <select id="cloak">
+          <option value="">None</option>
+          <option value="Google Docs|https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico">Google Docs</option>
+          <option value="Classes|https://ssl.gstatic.com/classroom/favicon.png">Google Classroom</option>
+        </select>
+      </label>
+      <button id="aboutblank" type="button">Open in about:blank</button>
+    </details>
+    <p id="error" class="error"></p>
+  </main>
+
+  <section id="browser" hidden>
+    <div class="toolbar">
+      <button id="home-btn" title="Home">◆</button>
+      <button id="back-btn" title="Back">←</button>
+      <button id="fwd-btn" title="Forward">→</button>
+      <button id="reload-btn" title="Reload">⟳</button>
+      <form id="bar-form"><input id="bar" type="text" /></form>
+      <button id="inspect-btn" title="Inspect Element">⌬</button>
+      <button id="full-btn" title="Fullscreen">⛶</button>
+    </div>
+    <div id="frame-holder"></div>
+  </section>
+</body>
+</html>
